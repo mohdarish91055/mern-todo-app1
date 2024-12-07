@@ -77,7 +77,7 @@ exports.loginUser = async (req,res)=>{
         //send toke in http only cookies
         res.cookie('token',token,{
             httpOnly:true,
-            secure:false,
+            secure:true,
             samSite:'none',
             maxAge: 24*60*60*1000,
         })
@@ -101,7 +101,7 @@ exports.loginUser = async (req,res)=>{
 exports.logoutUser = (req,res)=>{
     res.cookie('token','',{
         httpOnly:true,
-        secure:false,
+        secure:true,
         samSite:'None',
         expires:new Date(0)+24*60*60*100,
     });
