@@ -13,7 +13,6 @@ app.use(cookieParser());
 
 app.use(cors({
     origin: 'http://localhost:3000', // Frontend URL
-    methods:["POST","GET"],
     credentials: true,               // Allow credentials (cookies)
   }));
 connectDB();
