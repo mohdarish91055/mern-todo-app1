@@ -9,6 +9,7 @@ const authMiddleware = async(req,res,next)=>{
     if(!authHeader){
         return res.status(401).send({
             message: 'No token, authorization denied',
+            authHeader,
         })
     }
 
