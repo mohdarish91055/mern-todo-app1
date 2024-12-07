@@ -101,7 +101,7 @@ exports.loginUser = async (req,res)=>{
 exports.logoutUser = (req,res)=>{
     res.cookie('token','',{
         httpOnly:true,
-        secure:false,
+        secure:true,
         samSite:'None',
         expires:new Date(0)+24*60*60*100,
     });
