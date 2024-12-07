@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin: 'http://localhost:3000', // Frontend URL
+    origin: 'https://mern-todo-app1-1.onrender.com', // Frontend URL
     credentials: true,               // Allow credentials (cookies)
   }));
 connectDB();
