@@ -8,7 +8,7 @@ const authMiddleware = async(req,res,next)=>{
 
     if(!authHeader){
         return res.status(401).send({
-            essage: 'No token, authorization denied',
+            message: 'No token, authorization denied',
         })
     }
 
